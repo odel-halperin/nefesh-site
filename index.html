@@ -1,160 +1,321 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>אדל הלפרין – התבודדות, נפש ו-QA</title>
-  <meta name="description" content="אדל הלפרין – פרופיל אישי המחבר בין התבודדות והעולם הפנימי לבין לימודי QA וטכנולוגיה. מאמרים, השראה וכלים מעשיים לשקט פנימי וצמיחה." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <style>
-    
-:root { --bg:#f7f9fc; --ink:#243b53; --muted:#627d98; --brand:#2a4d69; --accent:#8ecae6; --gold:#b08900; --card:#ffffff; }
-*{box-sizing:border-box} html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:'Heebo',system-ui,Segoe UI,Roboto,Arial,sans-serif}
-a{color:var(--brand);text-decoration:none} a:hover{opacity:.9}
-header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #e6edf5}
-.nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;gap:.8rem}
-.brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
-.brand .logo{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#cde7f6);display:grid;place-items:center;color:#0b3954;font-weight:800}
-.nav-links{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
-.btn{display:inline-block;border:1px solid var(--brand);color:var(--brand);padding:.55rem 1rem;border-radius:999px;font-weight:500}
-.btn.fill{background:var(--brand);color:#fff}
-.btn.gold{border-color:var(--gold);color:#fff;background:linear-gradient(135deg,#e9c46a,#b08900)}
-section{padding:56px 16px} .container{max-width:1100px;margin:auto}
-.card{background:var(--card);border:1px solid #e6edf5;border-radius:18px;box-shadow:0 6px 24px rgba(15,23,42,.04);padding:24px}
-blockquote.quote{margin:0 0 12px;padding:14px 18px;border-inline-start:4px solid var(--brand);background:#eef6fb;border-radius:12px;color:#1d3557;font-weight:600}
-figure{margin:0;background:#fff;border:1px solid #e6edf5;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-figure img{width:100%;height:auto;display:block}
-figure figcaption{padding:10px 12px;color:#4a5d70;font-size:14px}
-footer{padding:28px 16px;border-top:1px solid #e6edf5;text-align:center;color:#5d7285}
+  <meta charset="UTF-8">
+  <title>אתר נפש – התבוננות ורגע של שקט</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .hero{position:relative;min-height:60vh;display:grid;place-items:center;text-align:center;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:
-      linear-gradient(rgba(255,255,255,.70),rgba(255,255,255,.85)),
-      url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center}
-    .hero::after{content:"";position:absolute;inset:0;mix-blend-mode:multiply;opacity:.35;background:
-      url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center}
-    .hero>.wrap{position:relative;max-width:900px;margin:auto;padding:3rem 1rem}
-    .kicker{display:inline-block;padding:.35rem .75rem;border-radius:999px;background:#e6f2fa;color:#0b3954;font-weight:700;margin-bottom:.8rem}
-    h1{margin:.3rem 0 0;font-size:clamp(28px,4vw,42px);line-height:1.25;color:var(--brand)}
-    .lead{margin:1rem auto 1.5rem;max-width:850px;font-size:clamp(16px,2.3vw,20px);color:var(--muted)}
-    .gallery-grid{display:grid;gap:14px} @media(min-width:800px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+  <style>
+    :root{
+      --bg:#f5f3ff;
+      --card:#ffffff;
+      --border:#e2e8f0;
+      --text:#0f172a;
+      --muted:#64748b;
+      --accent:#6366f1;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:radial-gradient(circle at top,#e0f2fe 0,#fdf2ff 38%,#f8fafc 100%);
+      color:var(--text);
+      line-height:1.7;
+      padding:0;
+      margin:0;
+    }
+
+    .page{
+      max-width:1080px;
+      margin:0 auto;
+      padding:1.5rem 1.1rem 3rem;
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:1.5rem;
+    }
+
+    header h1{
+      letter-spacing:.05em;
+      font-size:clamp(26px,3vw,32px);
+      margin-bottom:.35rem;
+    }
+
+    header p{
+      font-size:clamp(14px,2vw,17px);
+      color:var(--muted);
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      font-size:.75rem;
+      padding:.25rem .65rem;
+      border-radius:999px;
+      background:rgba(99,102,241,.08);
+      color:#4f46e5;
+      margin-bottom:.4rem;
+    }
+
+    /* אזור ההירו */
+    .hero{
+      background:rgba(255,255,255,.85);
+      border-radius:24px;
+      padding:1.7rem 1.4rem 1.9rem;
+      box-shadow:0 18px 45px rgba(15,23,42,.12);
+      border:1px solid rgba(148,163,184,.35);
+      backdrop-filter:blur(8px);
+    }
+
+    .hero h1{
+      font-size:clamp(22px,2.6vw,26px);
+      margin-bottom:.5rem;
+    }
+
+    .lead{
+      margin:1rem auto 1.2rem;
+      max-width:850px;
+      font-size:clamp(15px,2.2vw,18px);
+      color:var(--muted);
+    }
+
+    /* תמונה עגולה */
+    .hero-portrait{
+      margin:1.4rem auto .4rem;
+      display:flex;
+      justify-content:center;
+    }
+
+    .hero-portrait img{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      object-fit:cover;
+      box-shadow:0 12px 30px rgba(15,23,42,.25);
+      border:3px solid #fff;
+    }
+
+    .hero-tags{
+      display:flex;
+      gap:.6rem;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:.6rem;
+    }
+
+    .chip{
+      font-size:.8rem;
+      padding:.2rem .7rem;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,.6);
+      background:#f8fafc;
+      color:#475569;
+    }
+
+    /* פריסת תוכן + גלריה */
+    .layout{
+      display:flex;
+      flex-direction:column;
+      gap:1.1rem;
+      margin-top:1.4rem;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:22px;
+      padding:1.25rem 1.2rem 1.4rem;
+      border:1px solid var(--border);
+      box-shadow:0 10px 28px rgba(15,23,42,.08);
+    }
+
+    .card h2{
+      font-size:1.1rem;
+      margin-bottom:.45rem;
+    }
+
+    .card p{
+      font-size:.94rem;
+      color:var(--muted);
+      margin-bottom:.45rem;
+    }
+
+    .card ul{
+      padding-right:1.1rem;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+
+    .card ul li{
+      margin-bottom:.25rem;
+    }
+
+    .quote{
+      border-right:4px solid #a855f7;
+      padding-right:.6rem;
+      margin:.4rem 0 .7rem;
+      font-size:.9rem;
+      color:#4b5563;
+      font-style:italic;
+    }
+
+    /* גלריה – 3 בשורה במסך רחב */
+    .gallery-card h2{margin-bottom:.35rem;}
+
+    .gallery-grid{
+      display:grid;
+      gap:16px;
+      grid-template-columns:repeat(1,1fr);
+      margin-top:.6rem;
+    }
+
+    @media(min-width:700px){
+      .layout{
+        flex-direction:row;
+        align-items:flex-start;
+      }
+      .layout-main{
+        flex:2;
+      }
+      .layout-side{
+        flex:1.2;
+      }
+      .gallery-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+    }
+
+    figure{
+      margin:0;
+      background:#fff;
+      border:1px solid #e6edf5;
+      border-radius:16px;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      box-shadow:0 8px 22px rgba(15,23,42,.12); /* צללית עדינה */
+    }
+
+    figure img{
+      display:block;
+      width:100%;
+      height:170px;
+      object-fit:cover;
+    }
+
+    figcaption{
+      padding:.45rem .6rem .55rem;
+      font-size:.8rem;
+      color:#475569;
+    }
+
+    footer{
+      margin-top:2rem;
+      text-align:center;
+      font-size:.78rem;
+      color:var(--muted);
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
   </style>
 </head>
 <body>
-  <header class="nav" aria-label="סרגל ניווט ראשי">
-    <div class="nav-inner">
-      <div class="brand" aria-label="לוגו ושם האתר">
-        <div class="logo" aria-hidden="true">A</div>
-        <div>אדל הלפרין · נשמה & QA</div>
+  <div class="page">
+    <header>
+      <div class="badge">אתר נפש • התבוננות יומיומית</div>
+      <h1>רגע קטן לעצמי – לנשום, לחשוב, להודות</h1>
+      <p>מרחב שקט שבו אני עוצרת לרגע בתוך הלימודים, הבית והילדים – ושומעת את הקול הפנימי.</p>
+    </header>
+
+    <section class="hero">
+      <h1>בין עומס היום־יום לבין התבוננות פנימית</h1>
+      <p class="lead">
+        האתר הזה נולד מהרצון לעצור רגע, לכתוב לעצמי, ולאסוף נקודות אור קטנות –
+        מחשבות, הודיה, התבוננות על הילדים ועל הדרך שלי. זה מקום שמאפשר לנשמה
+        לנשום לרגע, ולהזכיר לעצמי שאני בדרך, לא חייבת להיות מושלמת.
+      </p>
+
+      <!-- תמונה עגולה – משתמשת ב-assets/img2.jpg -->
+      <div class="hero-portrait">
+        <img src="assets/img2.jpg" alt="תמונה אישית – רגע של נשימה והתבוננות" loading="lazy">
       </div>
-      <nav class="nav-links" aria-label="קישורי דפים">
-        <a href="#about">על עצמי</a>
-        <a href="#soul">על הנפש</a>
-        <a href="#articles">מאמרים</a>
-        <a href="#gallery">גלריה</a>
-        <a href="#contact" class="btn">צרו קשר</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero" role="banner">
-    <div class="wrap">
-      <span class="kicker">התבודדות • נפש • QA</span>
-      <h1>בין נחל זורם לשורות קוד – חיבור של לב, אמונה ומעשה</h1>
-      <p class="lead">כאן אני מחברת בין רגעי התבודדות ודיבור מהלב לבין לימודי QA וטכנולוגיה. מאמרים, הגות וכלים מעשיים – כדי לקבל בהירות, רוגע ועוצמה פנימית בתוך השגרה.</p>
-      <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
-        <a href="#soul" class="btn fill">על הנפש</a>
-        <a href="#gallery" class="btn">לגלריה</a>
+      <div class="hero-tags">
+        <span class="chip">התבוננות</span>
+        <span class="chip">נפש ושקט פנימי</span>
+        <span class="chip">אימהות ולמידה</span>
+        <span class="chip">נהרות, טבע ומסע אישי</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="soul" class="soul">
-    <div class="container card">
-      <blockquote class="quote">לפעמים דווקא השקט מגלה את הדרך.</blockquote>
-      <h2>על הנפש והדרך האישית שלי</h2>
-      <p>זה התחיל בערב שגרתי אחרי יום ארוך בבית הספר. התיישבתי מול הלוח ועלה בי משפט חד: <strong>“אני לא מתקדמת.”</strong> ימים של התלבטויות ושיחות עם בעלי – כוסות קפה שלא נגמרות – הובילו אותנו לרעיון: אולי QA יתאים לי.</p>
-      <p>שמחה התערבבה בפחד. עולם המחשבים והשפה ההייטקיסטית היו זרים. למדתי ובכיתי; קשה היה להיפרד מהמוכר של הכיתה אל מול מסך וקוד. ואז, באמצע נסיעה שקטה, התחלתי לדבר עם עצמי – והשיחה הפכה לתפילה. חזרתי להתבודדות: להקשיב, לשאול, לבקש.</p>
-      <p>מאז אני מחוברת לעולם הנפש: קוראת, מתבוננת, מדברת עם אלוקים בפשטות. בעולם שיש בו הרבה קאוצ’ינג ושיטות להעצמה, גיליתי שהכלי הכי עמוק הוא השיחה הכנה עם הבורא. היום, בלימודי ה-QA, אני מרגישה יציבה יותר, כי מצאתי חיבור בין הרוח למעשה.</p>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container card">
-      <h2>הדרך שלי – מהוראה ל-QA</h2>
-      <p>שנים עסקתי בהוראה, ועם הזמן הרגשתי שאני לא מתקדמת. משהו בתוכי ביקש שינוי – התחדשות, אתגר, כיוון חדש לחיים. ישבתי עם בעלי, שוחחנו וחשבנו יחד, ובמהלך החיפוש גילינו את תחום ה-QA.</p>
-      <p>בהתחלה הכול נראה לי מבלבל. מילים חדשות, עולם טכנולוגי שלא הכרתי, והמון חששות. היו רגעים של ספק, של פחד מהלא-נודע. אבל היה לי כלי אחד שתמיד עוזר לי – <strong>ההתבודדות</strong>.</p>
-      <p>כך הצלחתי להתגבר ולהמשיך קדימה. היום אני כבר בדרך החדשה שלי, לומדת QA, מגלה עולמות חדשים, ומתמלאת אמונה שכל מה שקורה הוא לטובה.</p>
-      <div style="margin-top:10px;display:flex;gap:.6rem;flex-wrap:wrap">
-        <a class="btn gold" href="article-zman-letaken.html">מאמר: זמן לתקן</a>
-        <a class="btn" href="#contact">דברו איתי</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="articles" class="articles" aria-label="מאמרים והתבוננות">
-    <div class="container">
-      <h2 style="margin-bottom:18px">מאמרים נבחרים</h2>
-      <div class="cards" style="display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
-        <article class="card"><span class="tag">חשבון נפש</span><h3>זמן לתקן</h3><p>מודל קצר: הכרה → אחריות → בקשה לעזרה → צעד אחד קדימה.</p><a href="article-zman-letaken.html">לקריאה ▶</a></article>
-        <article class="card"><span class="tag">חינוך</span><h3>חינוך ילדים בהתבוננות</h3><p>פחות תגובתיות – יותר הובלה רגועה.</p><a href="article-hinuch-hitbonenut.html">לקריאה ▶</a></article>
-        <article class="card"><span class="tag">מנהיגות</span><h3>שקט פנימי למנהלים</h3><p>3 דקות לפני פגישה – ההבדל בין תגובה אוטומטית להחלטה נבונה.</p><a href="article-managers-calm.html">לקריאה ▶</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="gallery" class="gallery">
-    <div class="container">
-      <h2>גלריה</h2>
-      <p style="color:#556b80">רגעים אותנטיים מהרוגע שבעיר: ספסל עץ, אור שמש ונשימה עמוקה.</p>
-      <div class="gallery-grid">
-        <figure>
-          <img src="assets/img1.jpg" alt="אדל יושבת על ספסל, מביטה לשמיים, אור רך, שיחים ובניין ברקע" loading="lazy">
-          <figcaption>דקה של שמיים פתוחים.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img2.jpg" alt="צילום תקריב – אדל מחייכת עם משקפי שמש, יושבת על ספסל בפארק" loading="lazy">
-          <figcaption>חיוך אחרי שיחה פנימית.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img3.jpg" alt="פריים רחב – אדל יושבת על ספסל עץ בפארק, עצים וספסלים ברקע" loading="lazy">
-          <figcaption>שקיעה חמה — זמן לחשוב.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img4.jpg" alt="סלפי מחויך – אדל תחת עץ ירוק, שרשרת ולבוש בהיר" loading="lazy">
-          <figcaption>שמחה פשוטה מתחת לעץ.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container grid" style="grid-template-columns:1fr;gap:20px">
-      <div class="card">
-        <h2 style="margin-top:0;color:var(--brand)">צרו קשר</h2>
-        <p style="color:#556b80">אשמח לשמוע – שאלה, מחשבה או שיתוף לב. אפשר לפנות במייל או דרך הטופס:</p>
-        <form name="contact" netlify data-netlify="true" method="POST">
-          <input type="hidden" name="form-name" value="contact">
-          <label for="name">שם מלא</label>
-          <input id="name" name="name" required>
-          <label for="email">אימייל</label>
-          <input id="email" type="email" name="email" required>
-          <label for="message">הודעה</label>
-          <textarea id="message" name="message" required></textarea>
-          <div style="margin-top:10px;display:flex;gap:.6rem;flex-wrap:wrap">
-            <button class="btn fill" type="submit">שליחה</button>
-            <a class="btn" href="mailto:odel3206@gmail.com">או שליחת מייל</a>
+    <div class="layout">
+      <!-- צד שמאל / עיקרי -->
+      <div class="layout-main">
+        <section class="card">
+          <h2>מחשבות ליום־יום</h2>
+          <div class="quote">
+            "מותר לי להיות בדרך. גם אם היום לא היה מושלם – כל צעד קטן של מודעות הוא ניצחון של הנפש."
           </div>
-        </form>
-      </div>
-    </div>
-  </section>
+          <p>
+            אני כותבת לעצמי נקודות קטנות שמזכירות לי לעצור ולהתבונן:  
+            איך הרגשתי היום? איפה הצלחתי לבחור בסבלנות? מתי הצלחתי לנשום במקום להגיב מהר?
+          </p>
+          <ul>
+            <li>לעצור לכוס מים בשקט ולנשום עמוק שלוש נשימות.</li>
+            <li>לכתוב שלושה דברים טובים שקרו היום, גם אם הם קטנים מאוד.</li>
+            <li>להיזכר ברגע אחד יפה מהטבע – נהר, עץ, שמיים או ענן מיוחד.</li>
+            <li>להגיד לעצמי מילה טובה, כמו שהייתי אומרת לחברה טובה.</li>
+          </ul>
+        </section>
 
-  <footer>
-    <div class="container">© <span id="year"></span> אדל הלפרין · כל הזכויות שמורות</div>
-  </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <section class="card">
+          <h2>פינת תודה</h2>
+          <p>
+            לא תמיד היום מרגיש קל. אבל דווקא שם, בתוך העייפות והבלגן,
+            אני מנסה למצוא כמה נקודות קטנות של תודה – כדי לחזק את הלב.
+          </p>
+          <ul>
+            <li>תודה על הנשימה, על האפשרות לפתוח דף חדש בכל בוקר.</li>
+            <li>תודה על הילדים ועל החיוך שלהם, גם כשהם מאתגרים.</li>
+            <li>תודה על האפשרות ללמוד, להתקדם ולהסתכל קדימה בתקווה.</li>
+            <li>תודה על רגעי שקט קטנים – נסיעה באוטובוס, קפה לבד, נוף מהחלון.</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- צד ימין / גלריה -->
+      <aside class="layout-side card gallery-card">
+        <h2>גלריית רגעי נפש</h2>
+        <p>
+          תמונות קטנות שמזכירות לי יופי, טבע ורגעים שקטים. כל תמונה היא נקודה
+          של נשימה בתוך יום עמוס.
+        </p>
+        <div class="gallery-grid">
+          <!-- כאן השתמשתי ב-img1, img3, img4 – אפשר להחליף לפי הרצון שלך -->
+          <figure>
+            <img src="assets/img1.jpg" alt="רגע של טבע ושקט">
+            <figcaption>התבוננות שקטה מול הנוף.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img3.jpg" alt="אור ושמים">
+            <figcaption>שמיים פתוחים שמזכירים מרחב בלב.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img4.jpg" alt="מסע אישי">
+            <figcaption>דרך אישית, צעד אחרי צעד, בלי לחץ.</figcaption>
+          </figure>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      אתר נפש – מרחב אישי להתבוננות, הודיה ושקט פנימי.
+    </footer>
+  </div>
 </body>
 </html>
