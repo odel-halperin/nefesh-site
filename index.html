@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>אדל הלפרין – התבודדות, נפש ו-QA</title>
+  <meta name="description" content="אדל הלפרין – פרופיל אישי המחבר בין התבודדות והעולם הפנימי לבין לימודי QA וטכנולוגיה. מאמרים, השראה וכלים מעשיים לשקט פנימי וצמיחה." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    
+:root { --bg:#f7f9fc; --ink:#243b53; --muted:#627d98; --brand:#2a4d69; --accent:#8ecae6; --gold:#b08900; --card:#ffffff; }
+*{box-sizing:border-box} html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:'Heebo',system-ui,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--brand);text-decoration:none} a:hover{opacity:.9}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #e6edf5}
+.nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;gap:.8rem}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
+.brand .logo{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#cde7f6);display:grid;place-items:center;color:#0b3954;font-weight:800}
+.nav-links{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;border:1px solid var(--brand);color:var(--brand);padding:.55rem 1rem;border-radius:999px;font-weight:500}
+.btn.fill{background:var(--brand);color:#fff}
+.btn.gold{border-color:var(--gold);color:#fff;background:linear-gradient(135deg,#e9c46a,#b08900)}
+section{padding:56px 16px} .container{max-width:1100px;margin:auto}
+.card{background:var(--card);border:1px solid #e6edf5;border-radius:18px;box-shadow:0 6px 24px rgba(15,23,42,.04);padding:24px}
+blockquote.quote{margin:0 0 12px;padding:14px 18px;border-inline-start:4px solid var(--brand);background:#eef6fb;border-radius:12px;color:#1d3557;font-weight:600}
+figure{margin:0;background:#fff;border:1px solid #e6edf5;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+figure img{width:100%;height:auto;display:block}
+figure figcaption{padding:10px 12px;color:#4a5d70;font-size:14px}
+footer{padding:28px 16px;border-top:1px solid #e6edf5;text-align:center;color:#5d7285}
+
+    .hero{position:relative;min-height:60vh;display:grid;place-items:center;text-align:center;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:
+      linear-gradient(rgba(255,255,255,.70),rgba(255,255,255,.85)),
+      url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center}
+    .hero::after{content:"";position:absolute;inset:0;mix-blend-mode:multiply;opacity:.35;background:
+      url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center}
+    .hero>.wrap{position:relative;max-width:900px;margin:auto;padding:3rem 1rem}
+    .kicker{display:inline-block;padding:.35rem .75rem;border-radius:999px;background:#e6f2fa;color:#0b3954;font-weight:700;margin-bottom:.8rem}
+    h1{margin:.3rem 0 0;font-size:clamp(28px,4vw,42px);line-height:1.25;color:var(--brand)}
+    .lead{margin:1rem auto 1.5rem;max-width:850px;font-size:clamp(16px,2.3vw,20px);color:var(--muted)}
+    .gallery-grid{display:grid;gap:14px} @media(min-width:800px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <header class="nav" aria-label="סרגל ניווט ראשי">
+    <div class="nav-inner">
+      <div class="brand" aria-label="לוגו ושם האתר">
+        <div class="logo" aria-hidden="true">A</div>
+        <div>אדל הלפרין · נשמה & QA</div>
+      </div>
+      <nav class="nav-links" aria-label="קישורי דפים">
+        <a href="#about">על עצמי</a>
+        <a href="#soul">על הנפש</a>
+        <a href="#articles">מאמרים</a>
+        <a href="#gallery">גלריה</a>
+        <a href="#contact" class="btn">צרו קשר</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" role="banner">
+    <div class="wrap">
+      <span class="kicker">התבודדות • נפש • QA</span>
+      <h1>בין נחל זורם לשורות קוד – חיבור של לב, אמונה ומעשה</h1>
+      <p class="lead">כאן אני מחברת בין רגעי התבודדות ודיבור מהלב לבין לימודי QA וטכנולוגיה. מאמרים, הגות וכלים מעשיים – כדי לקבל בהירות, רוגע ועוצמה פנימית בתוך השגרה.</p>
+      <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
+        <a href="#soul" class="btn fill">על הנפש</a>
+        <a href="#gallery" class="btn">לגלריה</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="soul" class="soul">
+    <div class="container card">
+      <blockquote class="quote">לפעמים דווקא השקט מגלה את הדרך.</blockquote>
+      <h2>על הנפש והדרך האישית שלי</h2>
+      <p>זה התחיל בערב שגרתי אחרי יום ארוך בבית הספר. התיישבתי מול הלוח ועלה בי משפט חד: <strong>“אני לא מתקדמת.”</strong> ימים של התלבטויות ושיחות עם בעלי – כוסות קפה שלא נגמרות – הובילו אותנו לרעיון: אולי QA יתאים לי.</p>
+      <p>שמחה התערבבה בפחד. עולם המחשבים והשפה ההייטקיסטית היו זרים. למדתי ובכיתי; קשה היה להיפרד מהמוכר של הכיתה אל מול מסך וקוד. ואז, באמצע נסיעה שקטה, התחלתי לדבר עם עצמי – והשיחה הפכה לתפילה. חזרתי להתבודדות: להקשיב, לשאול, לבקש.</p>
+      <p>מאז אני מחוברת לעולם הנפש: קוראת, מתבוננת, מדברת עם אלוקים בפשטות. בעולם שיש בו הרבה קאוצ’ינג ושיטות להעצמה, גיליתי שהכלי הכי עמוק הוא השיחה הכנה עם הבורא. היום, בלימודי ה-QA, אני מרגישה יציבה יותר, כי מצאתי חיבור בין הרוח למעשה.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container card">
+      <h2>הדרך שלי – מהוראה ל-QA</h2>
+      <p>שנים עסקתי בהוראה, ועם הזמן הרגשתי שאני לא מתקדמת. משהו בתוכי ביקש שינוי – התחדשות, אתגר, כיוון חדש לחיים. ישבתי עם בעלי, שוחחנו וחשבנו יחד, ובמהלך החיפוש גילינו את תחום ה-QA.</p>
+      <p>בהתחלה הכול נראה לי מבלבל. מילים חדשות, עולם טכנולוגי שלא הכרתי, והמון חששות. היו רגעים של ספק, של פחד מהלא-נודע. אבל היה לי כלי אחד שתמיד עוזר לי – <strong>ההתבודדות</strong>.</p>
+      <p>כך הצלחתי להתגבר ולהמשיך קדימה. היום אני כבר בדרך החדשה שלי, לומדת QA, מגלה עולמות חדשים, ומתמלאת אמונה שכל מה שקורה הוא לטובה.</p>
+      <div style="margin-top:10px;display:flex;gap:.6rem;flex-wrap:wrap">
+        <a class="btn gold" href="article-zman-letaken.html">מאמר: זמן לתקן</a>
+        <a class="btn" href="#contact">דברו איתי</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="articles" class="articles" aria-label="מאמרים והתבוננות">
+    <div class="container">
+      <h2 style="margin-bottom:18px">מאמרים נבחרים</h2>
+      <div class="cards" style="display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <article class="card"><span class="tag">חשבון נפש</span><h3>זמן לתקן</h3><p>מודל קצר: הכרה → אחריות → בקשה לעזרה → צעד אחד קדימה.</p><a href="article-zman-letaken.html">לקריאה ▶</a></article>
+        <article class="card"><span class="tag">חינוך</span><h3>חינוך ילדים בהתבוננות</h3><p>פחות תגובתיות – יותר הובלה רגועה.</p><a href="article-hinuch-hitbonenut.html">לקריאה ▶</a></article>
+        <article class="card"><span class="tag">מנהיגות</span><h3>שקט פנימי למנהלים</h3><p>3 דקות לפני פגישה – ההבדל בין תגובה אוטומטית להחלטה נבונה.</p><a href="article-managers-calm.html">לקריאה ▶</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>גלריה</h2>
+      <p style="color:#556b80">רגעים אותנטיים מהרוגע שבעיר: ספסל עץ, אור שמש ונשימה עמוקה.</p>
+      <div class="gallery-grid">
+        <figure>
+          <img src="assets/img1.jpg" alt="אדל יושבת על ספסל, מביטה לשמיים, אור רך, שיחים ובניין ברקע" loading="lazy">
+          <figcaption>דקה של שמיים פתוחים.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img2.jpg" alt="צילום תקריב – אדל מחייכת עם משקפי שמש, יושבת על ספסל בפארק" loading="lazy">
+          <figcaption>חיוך אחרי שיחה פנימית.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img3.jpg" alt="פריים רחב – אדל יושבת על ספסל עץ בפארק, עצים וספסלים ברקע" loading="lazy">
+          <figcaption>שקיעה חמה — זמן לחשוב.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img4.jpg" alt="סלפי מחויך – אדל תחת עץ ירוק, שרשרת ולבוש בהיר" loading="lazy">
+          <figcaption>שמחה פשוטה מתחת לעץ.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container grid" style="grid-template-columns:1fr;gap:20px">
+      <div class="card">
+        <h2 style="margin-top:0;color:var(--brand)">צרו קשר</h2>
+        <p style="color:#556b80">אשמח לשמוע – שאלה, מחשבה או שיתוף לב. אפשר לפנות במייל או דרך הטופס:</p>
+        <form name="contact" netlify data-netlify="true" method="POST">
+          <input type="hidden" name="form-name" value="contact">
+          <label for="name">שם מלא</label>
+          <input id="name" name="name" required>
+          <label for="email">אימייל</label>
+          <input id="email" type="email" name="email" required>
+          <label for="message">הודעה</label>
+          <textarea id="message" name="message" required></textarea>
+          <div style="margin-top:10px;display:flex;gap:.6rem;flex-wrap:wrap">
+            <button class="btn fill" type="submit">שליחה</button>
+            <a class="btn" href="mailto:odel3206@gmail.com">או שליחת מייל</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© <span id="year"></span> אדל הלפרין · כל הזכויות שמורות</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
