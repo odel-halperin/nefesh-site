@@ -7,17 +7,18 @@
 
   <style>
     :root{
-      --bg:#020617;
-      --bg-soft:#0f172a;
-      --card:#0b1220;
-      --card-soft:#111827;
-      --border:#1f2937;
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --accent:#38bdf8;
-      --accent-soft:#0ea5e9;
-      --accent-2:#a855f7;
-      --accent-3:#facc15;
+      /* צבעי בסיס – כחול רוחני */
+      --bg:#020617;              /* רקע כללי כהה */
+      --bg-soft:#0b1530;         /* כחול לילי רך */
+      --card:#081326;            /* כרטיסים כהים */
+      --card-soft:#0f1e3a;
+      --border:#1e3a8a;          /* תיחום כחול */
+      --text:#e5f0ff;            /* טקסט בהיר */
+      --muted:#9fb3ff;           /* טקסט משני */
+      --accent:#38bdf8;          /* תכלת שמח */
+      --accent-soft:#60a5fa;     /* כחול בהיר */
+      --accent-2:#a855f7;        /* סגול עדין */
+      --accent-3:#facc15;        /* זהב לנקודות אור */
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -25,8 +26,8 @@
     body{
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       background:
-        radial-gradient(circle at top left,#0ea5e918 0,#020617 55%),
-        radial-gradient(circle at bottom right,#a855f71a 0,#020617 55%);
+        radial-gradient(circle at top left,#38bdf822 0,#020617 52%),
+        radial-gradient(circle at bottom right,#4f46e533 0,#020617 60%);
       color:var(--text);
       line-height:1.7;
       min-height:100vh;
@@ -49,13 +50,13 @@
       gap:.75rem;
       padding:.5rem .9rem;
       border-radius:999px;
-      background:rgba(15,23,42,.92);
-      border:1px solid rgba(148,163,184,.5);
-      box-shadow:0 16px 40px rgba(15,23,42,.65);
+      background:linear-gradient(120deg,#020617ee,#0b1530f5,#1e3a8add);
+      border:1px solid rgba(129,140,248,.7);
+      box-shadow:0 16px 40px rgba(15,23,42,.85);
       position:sticky;
       top:.75rem;
       z-index:20;
-      backdrop-filter:blur(14px);
+      backdrop-filter:blur(16px);
     }
 
     .logo-text{
@@ -69,7 +70,7 @@
       width:9px;
       height:9px;
       border-radius:999px;
-      background:conic-gradient(from 160deg,#22c55e,#38bdf8,#a855f7,#f97316,#22c55e);
+      background:conic-gradient(from 160deg,#22c55e,#38bdf8,#a855f7,#facc15,#22c55e);
       box-shadow:0 0 12px #38bdf8;
     }
 
@@ -85,20 +86,21 @@
       border-radius:999px;
       border:1px solid transparent;
       color:var(--muted);
-      background:transparent;
+      background:rgba(15,23,42,.2);
     }
     .nav-links a:hover{
-      border-color:rgba(148,163,184,.6);
-      color:#e5e7eb;
+      border-color:rgba(129,140,248,.9);
+      color:#e0edff;
+      background:rgba(37,99,235,.4);
     }
 
     .pill-highlight{
-      border-color:rgba(56,189,248,.7)!important;
-      background:radial-gradient(circle at top left,#0ea5e91a 0,#020617 55%);
+      border-color:rgba(56,189,248,.8)!important;
+      background:radial-gradient(circle at top left,#38bdf828 0,#0b1530 55%);
       color:#e0f2fe!important;
     }
 
-    /* אזור הירו */
+    /* הירו */
     .hero{
       margin-top:1.5rem;
       display:grid;
@@ -113,11 +115,11 @@
     }
 
     .hero-main{
-      background:linear-gradient(135deg,#020617 0,#020617 40%,#0b1220 100%);
+      background:linear-gradient(145deg,#020617 0,#0b1530 40%,#1e40af 100%);
       border-radius:28px;
-      border:1px solid rgba(148,163,184,.7);
+      border:1px solid rgba(129,140,248,.85);
       padding:1.6rem 1.6rem 1.9rem;
-      box-shadow:0 28px 70px rgba(15,23,42,.85);
+      box-shadow:0 32px 80px rgba(15,23,42,.95);
       position:relative;
       overflow:hidden;
     }
@@ -127,9 +129,9 @@
       position:absolute;
       inset:-40%;
       background:
-        radial-gradient(circle at top,#38bdf81f 0,transparent 55%),
-        radial-gradient(circle at right,#a855f71a 0,transparent 55%);
-      opacity:.9;
+        radial-gradient(circle at top,#38bdf829 0,transparent 55%),
+        radial-gradient(circle at right,#818cf81f 0,transparent 55%);
+      opacity:.95;
       pointer-events:none;
     }
 
@@ -141,9 +143,6 @@
       gap:.4rem;
       margin-bottom:.35rem;
     }
-    .hero-tagline span.icon{
-      font-size:1rem;
-    }
 
     .hero-main h1{
       font-size:clamp(24px,3vw,30px);
@@ -153,7 +152,7 @@
     }
 
     .hero-main h1 span{
-      background:linear-gradient(120deg,#38bdf8,#a855f7);
+      background:linear-gradient(120deg,#38bdf8,#60a5fa,#a855f7);
       -webkit-background-clip:text;
       color:transparent;
     }
@@ -179,84 +178,23 @@
       font-size:.78rem;
       padding:.28rem .75rem;
       border-radius:999px;
-      border:1px solid rgba(148,163,184,.65);
-      background:rgba(15,23,42,.85);
-      color:#e5e7eb;
+      border:1px solid rgba(129,140,248,.75);
+      background:radial-gradient(circle at top,#1d4ed8aa 0,#020617 65%);
+      color:#e5edff;
       display:inline-flex;
       align-items:center;
       gap:.3rem;
-      white-space:nowrap;
     }
 
-    .chip span.icon{font-size:.95rem}
-
-    .hero-cta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.6rem;
-      margin-top:1.2rem;
-      position:relative;
-      z-index:1;
-      align-items:center;
-    }
-
-    .btn-primary{
-      border-radius:999px;
-      background:linear-gradient(135deg,#38bdf8,#0ea5e9);
-      padding:.45rem 1.15rem;
-      font-size:.85rem;
-      border:none;
-      color:#0b1120;
-      font-weight:600;
-      display:inline-flex;
-      align-items:center;
-      gap:.35rem;
-      box-shadow:0 14px 35px rgba(8,47,73,.75);
-      cursor:pointer;
-    }
-    .btn-primary span.icon{font-size:1rem}
-
-    .btn-ghost{
-      border-radius:999px;
-      border:1px solid rgba(148,163,184,.7);
-      padding:.38rem .95rem;
-      font-size:.8rem;
-      background:rgba(15,23,42,.85);
-      color:var(--muted);
-      display:inline-flex;
-      align-items:center;
-      gap:.3rem;
-      cursor:pointer;
-    }
-
-    .hero-micro{
-      margin-top:1rem;
-      font-size:.78rem;
-      color:var(--muted);
-      display:flex;
-      flex-wrap:wrap;
-      gap:.45rem;
-      align-items:center;
-      position:relative;
-      z-index:1;
-    }
-    .hero-dot{
-      width:6px;height:6px;border-radius:999px;
-      background:#22c55e;
-      box-shadow:0 0 10px rgba(34,197,94,.8);
-    }
-
-    /* צד ימין – כרטיס עם תמונה עגולה ו"מוניטור בדיקות" */
-    .hero-side{
-      position:relative;
-    }
+    /* תמונה עגולה – איכות */
+    .hero-side{position:relative;}
 
     .portrait-card{
-      background:radial-gradient(circle at top,#0ea5e91f 0,#020617 56%);
+      background:radial-gradient(circle at top,#38bdf824 0,#020617 60%);
       border-radius:26px;
-      border:1px solid rgba(148,163,184,.6);
+      border:1px solid rgba(129,140,248,.85);
       padding:1.2rem 1.3rem 1.4rem;
-      box-shadow:0 24px 60px rgba(15,23,42,.85);
+      box-shadow:0 26px 70px rgba(15,23,42,.95);
       text-align:center;
       position:relative;
       overflow:hidden;
@@ -267,11 +205,11 @@
       height:170px;
       border-radius:50%;
       margin:0 auto .6rem;
-      background:radial-gradient(circle at top,#38bdf855 0,#020617 60%);
+      background:radial-gradient(circle at top,#38bdf866 0,#020617 62%);
       display:flex;
       align-items:center;
       justify-content:center;
-      box-shadow:0 18px 40px rgba(15,23,42,.95);
+      box-shadow:0 18px 40px rgba(15,23,42,1);
     }
 
     .portrait-ring img{
@@ -279,7 +217,8 @@
       height:132px;
       border-radius:50%;
       object-fit:cover;
-      border:3px solid rgba(248,250,252,.95);
+      image-rendering:auto;
+      border:3px solid rgba(248,250,252,.98);
       box-shadow:0 14px 35px rgba(15,23,42,.9);
     }
 
@@ -301,9 +240,9 @@
       font-size:.78rem;
       padding:.25rem .7rem;
       border-radius:999px;
-      background:rgba(22,163,74,.1);
+      background:rgba(22,163,74,.12);
       color:#bbf7d0;
-      border:1px solid rgba(34,197,94,.6);
+      border:1px solid rgba(34,197,94,.7);
     }
 
     .mini-list{
@@ -312,19 +251,15 @@
       font-size:.8rem;
       color:var(--muted);
     }
+
     .mini-list li{
       list-style:none;
       margin-bottom:.25rem;
       display:flex;
-      align-items:flex-start;
       gap:.4rem;
     }
-    .mini-list li span.bullet{
-      font-size:.85rem;
-      margin-top:.1rem;
-    }
 
-    /* אזור פרויקטי QA + נפש */
+    /* כותרות */
     .section-title{
       margin-top:2.2rem;
       margin-bottom:.4rem;
@@ -337,6 +272,7 @@
       margin-bottom:1rem;
     }
 
+    /* כרטיסי QA */
     .cards-row{
       display:grid;
       grid-template-columns:repeat(1,minmax(0,1fr));
@@ -353,68 +289,51 @@
       border-radius:20px;
       border:1px solid var(--border);
       padding:1rem .95rem 1.1rem;
-      box-shadow:0 14px 32px rgba(15,23,42,.75);
+      box-shadow:0 18px 40px rgba(15,23,42,.9);
       position:relative;
       overflow:hidden;
     }
+
     .qa-card::before{
       content:"";
       position:absolute;
       inset:-40%;
-      background:radial-gradient(circle at top,#38bdf816 0,transparent 55%);
-      opacity:.7;
+      background:radial-gradient(circle at top,#38bdf818 0,transparent 55%);
+      opacity:.9;
       pointer-events:none;
     }
 
     .qa-card h3{
       font-size:1rem;
       margin-bottom:.3rem;
-      position:relative;z-index:1;
-    }
-    .qa-card p{
-      font-size:.82rem;
-      color:var(--muted);
-      margin-bottom:.55rem;
-      position:relative;z-index:1;
-    }
-
-    .qa-meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.35rem;
-      font-size:.74rem;
-      color:#e5e7eb;
-      margin-bottom:.55rem;
-      position:relative;z-index:1;
-    }
-
-    .qa-meta span{
-      padding:.15rem .5rem;
-      border-radius:999px;
-      background:rgba(15,23,42,.9);
-      border:1px solid rgba(148,163,184,.7);
-    }
-
-    .qa-link{
-      font-size:.78rem;
-      display:inline-flex;
-      align-items:center;
-      gap:.25rem;
-      color:var(--accent);
       position:relative;
       z-index:1;
     }
 
-    /* אזור נפש ותודה */
+    .qa-card p{
+      font-size:.82rem;
+      color:var(--muted);
+      margin-bottom:.55rem;
+      position:relative;
+      z-index:1;
+    }
+
+    .qa-link{
+      font-size:.78rem;
+      color:var(--accent-soft);
+      position:relative;
+      z-index:1;
+    }
+
+    /* שני טורים – אזור נפש */
     .flex-2col{
       display:grid;
-      grid-template-columns:repeat(1,minmax(0,1fr));
-      gap:.9rem;
+      gap:1rem;
       margin-top:1.6rem;
     }
     @media(min-width:860px){
       .flex-2col{
-        grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+        grid-template-columns:1.2fr 1fr;
       }
     }
 
@@ -423,36 +342,31 @@
       border-radius:20px;
       border:1px solid var(--border);
       padding:1.1rem 1rem 1.2rem;
-      box-shadow:0 12px 30px rgba(15,23,42,.8);
+      box-shadow:0 16px 36px rgba(15,23,42,.9);
     }
+
     .soft-card h3{
       font-size:1rem;
       margin-bottom:.4rem;
     }
+
     .soft-card p{
       font-size:.86rem;
       color:var(--muted);
       margin-bottom:.4rem;
     }
+
     .soft-card ul{
       font-size:.82rem;
       color:var(--muted);
       padding-right:1.1rem;
     }
+
     .soft-card li{margin-bottom:.25rem;}
 
-    .quote-line{
-      border-right:3px solid var(--accent-2);
-      padding-right:.6rem;
-      font-size:.84rem;
-      color:var(--muted);
-      margin-bottom:.6rem;
-      font-style:italic;
-    }
-
-    /* גלריה */
+    /* גלריה – כחול שמח */
     .gallery-section{
-      margin-top:1.8rem;
+      margin-top:2rem;
     }
 
     .gallery-grid{
@@ -469,20 +383,22 @@
 
     figure{
       margin:0;
-      background:#020617;
-      border:1px solid #1f2937;
+      background:radial-gradient(circle at top,#1e3a8a 0,#020617 60%);
+      border:1px solid #1e3a8a;
       border-radius:16px;
       overflow:hidden;
       display:flex;
       flex-direction:column;
-      box-shadow:0 14px 32px rgba(15,23,42,.85);
+      box-shadow:0 18px 45px rgba(15,23,42,.95);
     }
 
     figure img{
       display:block;
       width:100%;
-      height:170px;
+      height:auto;
+      aspect-ratio:4/3;
       object-fit:cover;
+      image-rendering:auto;
     }
 
     figcaption{
@@ -492,209 +408,156 @@
     }
 
     footer{
-      margin-top:2.2rem;
+      margin-top:2.5rem;
       text-align:center;
       font-size:.78rem;
       color:var(--muted);
     }
   </style>
 </head>
-<body>
-  <div class="shell">
 
-    <!-- סרגל עליון -->
-    <div class="topbar">
-      <div class="logo-text">
-        <span class="logo-dot"></span>
-        <span>QA &amp; נפש – אדל הלפרין</span>
-      </div>
-      <nav class="nav-links">
-        <a href="#qa-projects">פרויקטי QA</a>
-        <a href="#mind">התבוננות ונפש</a>
-        <a href="#gallery">גלריה</a>
-        <a href="#top" class="pill-highlight">ראש הדף</a>
-      </nav>
+<body>
+<div class="shell">
+
+  <!-- סרגל עליון -->
+  <div class="topbar">
+    <div class="logo-text">
+      <span class="logo-dot"></span>
+      <span>QA &amp; נפש – אדל הלפרין</span>
     </div>
 
-    <!-- הירו -->
-    <section class="hero" id="top">
-      <div class="hero-main">
-        <div class="hero-tagline">
-          <span class="icon">🐞</span>
-          <span>בודקת תוכנה בדרך – ובדרך לעצמי</span>
-        </div>
-        <h1>
-          בין <span>בדיקות, באגים ו-STR</span> לבין רגע של נשימה והתבוננות
-        </h1>
-        <p>
-          אני לומדת QA – STR, STD, Jira, TestRail ו-SQL – ובמקביל מנסה לא לשכוח
-          את הנפש: לעצור, לנשום, לכתוב לעצמי, ולזכור שכל באג שתפסתי הוא צעד
-          קטן בדרך האישית שלי ללמוד ולהתמקצע.
-        </p>
-
-        <div class="hero-chips">
-          <div class="chip"><span class="icon">✅</span>בדיקות ידניות ואוטומציה בסיסית</div>
-          <div class="chip"><span class="icon">💻</span>Web &amp; Mobile</div>
-          <div class="chip"><span class="icon">🧠</span>חשיבה לוגית והתבוננות</div>
-          <div class="chip"><span class="icon">📚</span>STR / STD / TestRail</div>
-        </div>
-
-        <div class="hero-cta-row">
-          <button class="btn-primary" onclick="location.href='#qa-projects'">
-            <span class="icon">🔍</span>
-            לראות את פרויקטי ה-QA שלי
-          </button>
-          <button class="btn-ghost" onclick="location.href='#mind'">
-            🌿 פינת התבוננות לנפש
-          </button>
-        </div>
-
-        <div class="hero-micro">
-          <span class="hero-dot"></span>
-          <span>מתאמנת כל יום – גם על בדיקות, גם על סבלנות לעצמי.</span>
-        </div>
-      </div>
-
-      <aside class="hero-side">
-        <div class="portrait-card">
-          <div class="portrait-ring">
-            <img src="img2.jpg" alt="אדל הלפרין – רגע של נשימה והתבוננות" loading="lazy">
-          </div>
-          <h2>אדל – לומדת QA ובונה עתיד</h2>
-          <p>
-            אמא, לומדת, מתרגלת נהיגה, מנהלת בית – ובתוך כל זה בונה קריירה
-            חדשה בעולם הבדיקות.
-          </p>
-          <div class="status-pill">
-            <span>●</span> לומדת כרגע – STR, Jira, SQL, אוטומציה
-          </div>
-          <ul class="mini-list">
-            <li><span class="bullet">📌</span><span>שואפת לדייק – בתסריטי בדיקות וגם בחיים.</span></li>
-            <li><span class="bullet">✨</span><span>מעדיפה אתר חי ונושם, לא רק קובץ תרגיל.</span></li>
-            <li><span class="bullet">🌊</span><span>מקבלת השראה מנהרות וטבע – ומכניסה את זה לעיצוב.</span></li>
-          </ul>
-        </div>
-      </aside>
-    </section>
-
-    <!-- פרויקטי QA -->
-    <section id="qa-projects">
-      <h2 class="section-title">פרויקטי QA שעבדתי עליהם</h2>
-      <p class="section-sub">
-        כאן ריכזתי כמה דפים שיצרתי בתור עבודה ללימודי QA – כל דף מדבר על תהליך
-        למידה אחר: בדיקות, חינוך, התבוננות, ושקט פנימי גם למנהלים.
-      </p>
-
-      <div class="cards-row">
-        <article class="qa-card">
-          <h3>חינוך והתבוננות – מאמר QA עם לב</h3>
-          <p>
-            איך אני מסתכלת על חינוך ועל בדיקות – שניהם דורשים ראייה עמוקה,
-            סבלנות ויכולת לראות את הפרטים הקטנים.
-          </p>
-          <div class="qa-meta">
-            <span>📝 STR / תרחישים</span>
-            <span>👀 בדיקות ידניות</span>
-          </div>
-          <a class="qa-link" href="article-hinuch-hitbonenut.html">
-            לקריאת הדף &nbsp;↗
-          </a>
-        </article>
-
-        <article class="qa-card">
-          <h3>שקט פנימי למנהלים</h3>
-          <p>
-            דף שנכתב מתוך מחשבה על מנהלים – איך אפשר לנהל צוות, לעמוד ביעדים,
-            ובכל זאת לזכור את הנפש ואת השקט הפנימי.
-          </p>
-          <div class="qa-meta">
-            <span>🧩 ניהול באגים</span>
-            <span>🤝 תקשורת בצוות</span>
-          </div>
-          <a class="qa-link" href="article-managers-calm.html">
-            לקריאת הדף &nbsp;↗
-          </a>
-        </article>
-
-        <article class="qa-card">
-          <h3>זמן לתקן – לא רק קוד</h3>
-          <p>
-            כמו שבודקים מערכת ומתקנים באגים, כך גם בנפש – יש זמן לעצור, לבדוק,
-            ולתקן דברים קטנים בדרך.
-          </p>
-          <div class="qa-meta">
-            <span>🐞 מציאת תקלות</span>
-            <span>🛠 תהליך למידה</span>
-          </div>
-          <a class="qa-link" href="article-zman-letaken.html">
-            לקריאת הדף &nbsp;↗
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <!-- אזור נפש והתבוננות -->
-    <section id="mind" class="flex-2col">
-      <div class="soft-card">
-        <h3>מחשבות ליום־יום</h3>
-        <div class="quote-line">
-          "כל באג קטן שתפסתי היום – הוא ניצחון קטן של מודעות, גם בקוד וגם בלב."
-        </div>
-        <p>
-          לפעמים אחרי יום עמוס בבדיקות, שיעורי נהיגה, ילדים ובית, אני צריכה רגע
-          להזכיר לעצמי למה התחלתי – לבנות עתיד, ללמוד מקצוע, ולחזק את הנפש.
-        </p>
-        <ul>
-          <li>לעצור לרגע ולכתוב: מה הצלחתי היום?</li>
-          <li>לזכור שגם אם הכול לא הושלם – עשיתי צעד קדימה.</li>
-          <li>לשאול: איזה באג גיליתי היום במערכת, ואיזה באג קטן ראיתי בעצמי?</li>
-          <li>להגיד לעצמי מילה טובה על המאמץ ועל הדרך.</li>
-        </ul>
-      </div>
-
-      <div class="soft-card">
-        <h3>פינת תודה</h3>
-        <p>
-          בתוך העייפות של היומיום, אני רוצה לזכור את נקודות האור – דברים קטנים
-          שמחזקים את הלב ומזכירים לי שיש ברכה בדרך.
-        </p>
-        <ul>
-          <li>תודה על היכולת ללמוד מקצוע חדש.</li>
-          <li>תודה על הילדים ועל החיוך שלהם כשאני חוזרת הביתה.</li>
-          <li>תודה על כל מורה, מרצה ומדריך שמלמדים אותי בסבלנות.</li>
-          <li>תודה על רגעי שקט קטנים – נסיעה, קפה, נוף.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- גלריה -->
-    <section id="gallery" class="gallery-section">
-      <h2 class="section-title">גלריית רגעי נפש</h2>
-      <p class="section-sub">
-        תמונות קטנות מהדרך – טבע, אור ושקט – שמשלבות את העולם הפנימי עם הדרך
-        החדשה בעולם ה-QA.
-      </p>
-
-      <div class="gallery-grid">
-        <figure>
-          <img src="img1.jpg" alt="רגע של טבע ושקט">
-          <figcaption>התבוננות מול נוף פתוח – כמו בדיקה שמסתכלת על כל התמונה.</figcaption>
-        </figure>
-        <figure>
-          <img src="img3.jpg" alt="אור ושמים">
-          <figcaption>שמיים ואור – תזכורת להרים רגע את הראש מהמסך.</figcaption>
-        </figure>
-        <figure>
-          <img src="img4.jpg" alt="מסע אישי">
-          <figcaption>דרך אישית, צעד אחרי צעד – גם בלימודי QA וגם בחיים.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <footer>
-      QA &amp; נפש – אדל הלפרין • מרחב אישי לשילוב בין בדיקות תוכנה והתבוננות פנימית.
-    </footer>
-
+    <nav class="nav-links">
+      <a href="#qa-projects">פרויקטי QA</a>
+      <a href="#mind">התבוננות</a>
+      <a href="#gallery">גלריה</a>
+      <a href="#top" class="pill-highlight">ראש הדף</a>
+    </nav>
   </div>
+
+  <!-- הירו -->
+  <section class="hero" id="top">
+    <div class="hero-main">
+      <div class="hero-tagline">
+        <span>🐞</span>
+        <span>בודקת תוכנה בדרך – ובדרך לעצמי</span>
+      </div>
+
+      <h1>
+        בין <span>בדיקות, באגים ו-STR</span> לבין נשימה והתבוננות
+      </h1>
+
+      <p>
+        אני לומדת QA – STR, STD, Jira, SQL ואוטומציה – ובמקביל מנסה לשמור
+        על רגעים של שקט פנימי, מודעות ושמחה בדרך.
+      </p>
+
+      <div class="hero-chips">
+        <div class="chip">💻 Web &amp; Mobile</div>
+        <div class="chip">🧠 חשיבה לוגית</div>
+        <div class="chip">📚 STR / STD</div>
+        <div class="chip">📝 תהליכי בדיקות</div>
+      </div>
+    </div>
+
+    <!-- תמונה עגולה -->
+    <aside class="hero-side">
+      <div class="portrait-card">
+        <div class="portrait-ring">
+          <img src="img2.jpg" alt="אדל הלפרין">
+        </div>
+
+        <h2>אדל – בדרך לעולם ה-QA</h2>
+        <p>אמא, לומדת, בונה קריירה חדשה – ומכניסה אור ושמחה לכל שלב בדרך.</p>
+
+        <div class="status-pill">● לומדת STR, Jira, SQL ואוטומציה</div>
+
+        <ul class="mini-list">
+          <li>📌 מתאמנת כל יום, גם על התמקצעות וגם על סבלנות לעצמי.</li>
+          <li>🌊 שואבת השראה מטבע, נהרות ושמים פתוחים.</li>
+          <li>✨ אוהבת להפוך תרגיל לימודי לאתר חי ונושם.</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <!-- פרויקטי QA -->
+  <section id="qa-projects">
+    <h2 class="section-title">פרויקטי QA שלי</h2>
+    <p class="section-sub">כמה דפים שבניתי במהלך הלימודים – כל אחד מדבר על תהליך למידה אחר.</p>
+
+    <div class="cards-row">
+      <article class="qa-card">
+        <h3>חינוך והתבוננות</h3>
+        <p>איך בדיקות מתחברות לעולם של חינוך, הקשבה וסבלנות.</p>
+        <a href="article-hinuch-hitbonenut.html" class="qa-link">לקריאת הדף ↗</a>
+      </article>
+
+      <article class="qa-card">
+        <h3>שקט פנימי למנהלים</h3>
+        <p>ניהול צוות ובאגים תוך שמירה על לב רגוע ומודע.</p>
+        <a href="article-managers-calm.html" class="qa-link">לקריאת הדף ↗</a>
+      </article>
+
+      <article class="qa-card">
+        <h3>זמן לתקן – לא רק קוד</h3>
+        <p>כמו בקוד, גם בנפש יש באגים קטנים שראויים לתשומת לב.</p>
+        <a href="article-zman-letaken.html" class="qa-link">לקריאת הדף ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- אזור נפש והתבוננות -->
+  <section id="mind" class="flex-2col">
+    <div class="soft-card">
+      <h3>מחשבות ליום־יום</h3>
+      <p>
+        "כל באג קטן שתפסתי היום – הוא ניצחון קטן של מודעות, גם בקוד וגם בלב."
+      </p>
+      <ul>
+        <li>לעצור לכמה שניות של נשימה עמוקה.</li>
+        <li>לראות את ההתקדמות, גם אם היא קטנה.</li>
+        <li>להגיד לעצמי מילה טובה על המאמץ.</li>
+      </ul>
+    </div>
+
+    <div class="soft-card">
+      <h3>פינת תודה</h3>
+      <ul>
+        <li>תודה על האפשרות ללמוד מקצוע חדש.</li>
+        <li>תודה על הילדים, המשפחה והסבלנות שלהם.</li>
+        <li>תודה על כל מורה, מרצה ומדריך בדרך.</li>
+        <li>תודה על רגעי שקט קטנים – נסיעה, קפה, שמיים כחולים.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- גלריית רגעי נפש -->
+  <section id="gallery" class="gallery-section">
+    <h2 class="section-title">גלריית רגעי נפש</h2>
+    <p class="section-sub">תמונות קטנות מהדרך – טבע, אור ושקט שמזכירים לי לנשום.</p>
+
+    <div class="gallery-grid">
+      <figure>
+        <img src="img1.jpg" alt="תמונה 1">
+        <figcaption>התבוננות מול נוף פתוח – רגע של שקט באמצע היום.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img3.jpg" alt="תמונה 3">
+        <figcaption>אור ושמים – להרים את הראש מהמסך ולראות את הרקיע.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img4.jpg" alt="תמונה 4">
+        <figcaption>מסע אישי, צעד אחרי צעד – גם בלימודים וגם בחיים.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <footer>
+    QA &amp; נפש – אדל הלפרין • מרחב אישי לשילוב בין בדיקות תוכנה, התבוננות פנימית ושמחה.
+  </footer>
+
+</div>
 </body>
 </html>
